@@ -1,100 +1,72 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Tractor Cleanliness Checklist V6</title><style>
-*{box-sizing:border-box}body{margin:0;background:#eee;font-family:-apple-system,Arial,sans-serif;color:#171717}
-main{max-width:700px;margin:auto;background:#fff;min-height:100vh;padding:20px 16px 40px}
-h1{text-align:center;font-size:25px;margin:8px 0}.sub{text-align:center;font-weight:700;font-size:13px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
-.head{font-size:12px;font-weight:700;display:block;margin-bottom:4px}
-input,select{width:100%;font-size:17px;padding:12px;border:1px solid #aaa;border-radius:8px;background:#fff}
-.notice{margin:18px 0;background:#222;color:#fff;padding:10px;border-radius:7px;text-align:center;font-weight:700;font-size:13px}
-.help{font-size:13px;line-height:1.4;color:#555}h2{font-size:19px;margin-top:24px}
-.item{border-top:1px solid #ddd;padding:14px 0;font-size:15px;line-height:1.3}
-.yn{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
-.yn label{border:2px solid #999;border-radius:8px;padding:11px;text-align:center;font-weight:700}
-.yn input{width:auto;margin-right:7px}canvas{width:100%;height:150px;border:2px dashed #999;border-radius:8px;touch-action:none;background:#fff}
-.actions{display:flex;gap:10px}button{padding:14px;border:0;border-radius:9px;font-size:16px;font-weight:700}
-.clear{background:#ddd;color:#111;flex:1}.send{background:#111;color:#fff;width:100%;margin-top:20px;font-size:18px}
-.status{font-size:13px;color:#555;text-align:center;margin-top:10px}@media(max-width:520px){.grid{grid-template-columns:1fr}}
-</style></head><body><main><form id="f">
-<h1>Tractor Cleanliness Checklist</h1><div class="sub">CLEANLINESS EXPECTATIONS</div>
-<div class="grid">
-<div><label class="head">Driver Name *</label><input id="driver" required></div>
-<div><label class="head">Driver # *</label><input id="driverNo" required inputmode="numeric" pattern="[0-9]*"></div>
-<div><label class="head">Tractor # *</label><input id="tractor" required inputmode="numeric" pattern="[0-9]*"></div>
-<div><label class="head">Space # *</label><input id="space" required inputmode="numeric" pattern="[0-9]*"></div>
-<div><label class="head">Assignment Date *</label><input id="assign" required type="date"></div>
-<div><label class="head">Return Date *</label><input id="returnDate" required type="date"></div>
-<div><label class="head">APU in Standby Mode? *</label><select id="apu" required><option value="">Select</option><option>Yes</option><option>No</option></select></div>
-<div><label class="head">Logged out of NTransit? *</label><select id="ntransit" required><option value="">Select</option><option>Yes</option><option>No</option></select></div>
-<div><label class="head">Logged out of Tablet? *</label><select id="tablet" required><option value="">Select</option><option>Yes</option><option>No</option></select></div>
-</div>
-<div class="notice">You are not permitted to use tobacco or e-cigarette products in a tobacco free tractor.</div>
-<div class="help">To be completed when starting/finishing or when switching tractors and turned in to manager. Tractor should be clean and ready for the next driver assigned to this unit. If the tractor does not meet the expectations below, please notify a manager.</div>
-<h2>Action Items</h2><div class="item"><div><b>1)</b> All surface areas wiped down to include dash, steering wheel, shift lever, etc.</div>
-<div class="yn"><label><input required type="radio" name="q1" value="YES"> YES</label>
-<label><input required type="radio" name="q1" value="NO"> NO</label></div></div><div class="item"><div><b>2)</b> Inside windows are clean and wiped down</div>
-<div class="yn"><label><input required type="radio" name="q2" value="YES"> YES</label>
-<label><input required type="radio" name="q2" value="NO"> NO</label></div></div><div class="item"><div><b>3)</b> Floors and seats vacuumed</div>
-<div class="yn"><label><input required type="radio" name="q3" value="YES"> YES</label>
-<label><input required type="radio" name="q3" value="NO"> NO</label></div></div><div class="item"><div><b>4)</b> Jump seat clear of items and clutter</div>
-<div class="yn"><label><input required type="radio" name="q4" value="YES"> YES</label>
-<label><input required type="radio" name="q4" value="NO"> NO</label></div></div><div class="item"><div><b>5)</b> All bedding removed</div>
-<div class="yn"><label><input required type="radio" name="q5" value="YES"> YES</label>
-<label><input required type="radio" name="q5" value="NO"> NO</label></div></div><div class="item"><div><b>6)</b> All personal clothing removed (closet should be empty)</div>
-<div class="yn"><label><input required type="radio" name="q6" value="YES"> YES</label>
-<label><input required type="radio" name="q6" value="NO"> NO</label></div></div><div class="item"><div><b>7)</b> All food items removed (perishable and non-perishable)</div>
-<div class="yn"><label><input required type="radio" name="q7" value="YES"> YES</label>
-<label><input required type="radio" name="q7" value="NO"> NO</label></div></div><div class="item"><div><b>8)</b> Refrigerator is empty</div>
-<div class="yn"><label><input required type="radio" name="q8" value="YES"> YES</label>
-<label><input required type="radio" name="q8" value="NO"> NO</label></div></div><div class="item"><div><b>9)</b> Storage compartments are empty</div>
-<div class="yn"><label><input required type="radio" name="q9" value="YES"> YES</label>
-<label><input required type="radio" name="q9" value="NO"> NO</label></div></div><div class="item"><div><b>10)</b> Bottles and cups are removed</div>
-<div class="yn"><label><input required type="radio" name="q10" value="YES"> YES</label>
-<label><input required type="radio" name="q10" value="NO"> NO</label></div></div><div class="item"><div><b>11)</b> Cleaning kit stocked with items as needed using Comdata card</div>
-<div class="yn"><label><input required type="radio" name="q11" value="YES"> YES</label>
-<label><input required type="radio" name="q11" value="NO"> NO</label></div></div><div class="item"><div><b>12)</b> As applicable, stow snow chains in working order/properly replaced</div>
-<div class="yn"><label><input required type="radio" name="q12" value="YES"> YES</label>
-<label><input required type="radio" name="q12" value="NO"> NO</label></div></div><div class="item"><div><b>13)</b> Odor free</div>
-<div class="yn"><label><input required type="radio" name="q13" value="YES"> YES</label>
-<label><input required type="radio" name="q13" value="NO"> NO</label></div></div><div class="item"><div><b>14)</b> Wash tractor</div>
-<div class="yn"><label><input required type="radio" name="q14" value="YES"> YES</label>
-<label><input required type="radio" name="q14" value="NO"> NO</label></div></div><div class="item"><div><b>15)</b> Fuel tractor</div>
-<div class="yn"><label><input required type="radio" name="q15" value="YES"> YES</label>
-<label><input required type="radio" name="q15" value="NO"> NO</label></div></div><div class="item"><div><b>16)</b> Return tractor to designated parking spot</div>
-<div class="yn"><label><input required type="radio" name="q16" value="YES"> YES</label>
-<label><input required type="radio" name="q16" value="NO"> NO</label></div></div>
-<h2>Completion Information</h2><div class="grid">
-<div><label class="head">Current Odometer *</label><input id="odo" required inputmode="numeric" pattern="[0-9]*"></div>
-<div><label class="head">PM Due *</label><input id="pm" required inputmode="numeric" pattern="[0-9]*"></div>
-<div><label class="head">Coordinator Accepting Form</label><input id="coord"></div>
-<div><label class="head">Date *</label><input id="date" required type="date"></div></div>
-<h2>Driver Signature *</h2><canvas id="sig"></canvas><div class="actions"><button type="button" class="clear" id="clear">CLEAR SIGNATURE</button></div>
-<button class="send" type="submit">EMAIL COMPLETED CHECKLIST</button>
-<div class="status">V6. Nothing is stored on a server.</div></form>
-<script>
-const c=document.getElementById('sig'),x=c.getContext('2d'); let drawing=false,signed=false;
-function size(){const r=c.getBoundingClientRect();c.width=Math.round(r.width*devicePixelRatio);c.height=Math.round(r.height*devicePixelRatio);x.scale(devicePixelRatio,devicePixelRatio);x.lineWidth=2;x.lineCap='round';}
-size();
-function pos(e){const r=c.getBoundingClientRect(),p=e.touches?e.touches[0]:e;return [p.clientX-r.left,p.clientY-r.top]}
-function start(e){e.preventDefault();drawing=true;signed=true;let p=pos(e);x.beginPath();x.moveTo(...p)}
-function move(e){if(!drawing)return;e.preventDefault();let p=pos(e);x.lineTo(...p);x.stroke()}
-function stop(){drawing=false}
-c.addEventListener('touchstart',start,{passive:false});c.addEventListener('touchmove',move,{passive:false});c.addEventListener('touchend',stop);
-c.addEventListener('mousedown',start);c.addEventListener('mousemove',move);window.addEventListener('mouseup',stop);
-document.getElementById('clear').onclick=()=>{x.clearRect(0,0,c.width,c.height);signed=false};
-document.getElementById('f').addEventListener('submit',e=>{
- e.preventDefault(); if(!e.target.reportValidity())return;
- if(!signed){alert('Please sign the checklist before emailing it.');return;}
- let lines=['TRACTOR CLEANLINESS CHECKLIST','',
- 'Driver: '+driver.value,'Driver #: '+driverNo.value,'Tractor #: '+tractor.value,'Space #: '+space.value,
- 'Assignment Date: '+assign.value,'Return Date: '+returnDate.value,
- 'APU in Standby Mode: '+apu.value,'Logged out of NTransit: '+ntransit.value,'Logged out of Tablet: '+tablet.value,'',
- 'ACTION ITEMS'];
- lines.push('1) All surface areas wiped down to include dash, steering wheel, shift lever, etc.: '+document.querySelector('input[name=q1]:checked').value);lines.push('2) Inside windows are clean and wiped down: '+document.querySelector('input[name=q2]:checked').value);lines.push('3) Floors and seats vacuumed: '+document.querySelector('input[name=q3]:checked').value);lines.push('4) Jump seat clear of items and clutter: '+document.querySelector('input[name=q4]:checked').value);lines.push('5) All bedding removed: '+document.querySelector('input[name=q5]:checked').value);lines.push('6) All personal clothing removed (closet should be empty): '+document.querySelector('input[name=q6]:checked').value);lines.push('7) All food items removed (perishable and non-perishable): '+document.querySelector('input[name=q7]:checked').value);lines.push('8) Refrigerator is empty: '+document.querySelector('input[name=q8]:checked').value);lines.push('9) Storage compartments are empty: '+document.querySelector('input[name=q9]:checked').value);lines.push('10) Bottles and cups are removed: '+document.querySelector('input[name=q10]:checked').value);lines.push('11) Cleaning kit stocked with items as needed using Comdata card: '+document.querySelector('input[name=q11]:checked').value);lines.push('12) As applicable, stow snow chains in working order/properly replaced: '+document.querySelector('input[name=q12]:checked').value);lines.push('13) Odor free: '+document.querySelector('input[name=q13]:checked').value);lines.push('14) Wash tractor: '+document.querySelector('input[name=q14]:checked').value);lines.push('15) Fuel tractor: '+document.querySelector('input[name=q15]:checked').value);lines.push('16) Return tractor to designated parking spot: '+document.querySelector('input[name=q16]:checked').value);
- lines.push('','Current Odometer: '+odo.value,'PM Due: '+pm.value,'Driver Signature: Signed on digital form');
- let subject=encodeURIComponent('Tractor Cleanliness - Tractor '+tractor.value+' - '+driver.value+' - '+returnDate.value);
- let body=encodeURIComponent(lines.join('\n'));
- location.href='mailto:?subject='+subject+'&body='+body;
-});
-</script></main></body></html>
+Tractor Cleanliness Checklist
+CLEANLINESS EXPECTATIONS
+Driver Name *
+Driver # *
+Tractor # *
+Space # *
+Assignment Date *
+Return Date *
+APU in Standby Mode? *
+SelectYesNo
+Logged out of NTransit? *
+SelectYesNo
+Logged out of Tablet? *
+SelectYesNo
+You are not permitted to use tobacco or e-cigarette products in a tobacco free tractor.
+To be completed when starting/finishing or when switching tractors and turned in to manager. Tractor should be clean and ready for the next driver assigned to this unit. If the tractor does not meet the expectations below, please notify a manager.
+Action Items
+1) All surface areas wiped down to include dash, steering wheel, shift lever, etc.
+YES
+NO
+2) Inside windows are clean and wiped down
+YES
+NO
+3) Floors and seats vacuumed
+YES
+NO
+4) Jump seat clear of items and clutter
+YES
+NO
+5) All bedding removed
+YES
+NO
+6) All personal clothing removed (closet should be empty)
+YES
+NO
+7) All food items removed (perishable and non-perishable)
+YES
+NO
+8) Refrigerator is empty
+YES
+NO
+9) Storage compartments are empty
+YES
+NO
+10) Bottles and cups are removed
+YES
+NO
+11) Cleaning kit stocked with items as needed using Comdata card
+YES
+NO
+12) As applicable, stow snow chains in working order/properly replaced
+YES
+NO
+13) Odor free
+YES
+NO
+14) Wash tractor
+YES
+NO
+15) Fuel tractor
+YES
+NO
+16) Return tractor to designated parking spot
+YES
+NO
+Completion Information
+Current Odometer *
+PM Due *
+Driver Signature *
+CLEAR SIGNATURE
+PREVIEW SIGNED CHECKLIST
+V7 TEST — Office-only fields are excluded. Nothing is stored on a server. Save the PDF and attach it to the office email manually.
